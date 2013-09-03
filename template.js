@@ -1,9 +1,9 @@
 /**
- * grunt-wp-plugin
- * https://github.com/10up/grunt-wp-plugin
+ * sennza-wp-plugin
+ * https://github.com/sennza/grunt-wp-plugin
  *
- * Copyright (c) 2013 Eric Mann, 10up
- * Licensed under the MIT License
+ * Copyright (c) 2013 Bronson Quick, Sennza
+ * Licensed under the GPL2 License
  */
 
 'use strict';
