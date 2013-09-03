@@ -79,13 +79,8 @@ module.exports = function( grunt ) {
 			},
 			minify: {
 				expand: true,
-				{% if ('sass' === css_type || 'less' === css_type) { %}
 				cwd: 'css/',
 				src: ['{%= js_safe_name %}.css'],
-				{% } else { %}
-				cwd: 'css/src/',
-				src: ['{%= js_safe_name %}.css'],
-				{% } %}
 				dest: 'css/',
 				ext: '.min.css'
 			}
