@@ -135,6 +135,15 @@ module.exports = function( grunt ) {
 				src: ['**/*'],
 				dest: '{%= js_safe_name %}/'
 			}		
+		},
+		compass: {
+			dist: {                   // Target
+				options: {              // Target options
+					sassDir: 'css/sass',
+					cssDir: 'css',
+					imagesDir: 'images',
+				}
+    	}
 		}
 	} );
 	
@@ -148,9 +157,10 @@ module.exports = function( grunt ) {
 	grunt.loadNpmTasks( 'grunt-contrib-clean' );
 	grunt.loadNpmTasks( 'grunt-contrib-copy' );
 	grunt.loadNpmTasks( 'grunt-contrib-compress' );
+	grunt.loadNpmTasks( 'grunt-contrib-compass' );
 	
 	// Default task.
-	grunt.registerTask( 'default', ['jshint', 'concat', 'uglify', 'sass', 'cssmin'] );
+	grunt.registerTask( 'default', ['jshint', 'concat', 'uglify', 'sass', 'cssmin', 'compass'] );
 	grunt.registerTask( 'build', ['default', 'clean', 'copy', 'compress'] );
 
 	grunt.util.linefeed = '\n';

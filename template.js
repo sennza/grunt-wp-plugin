@@ -50,6 +50,7 @@ exports.template = function( grunt, init, done ) {
 			'grunt-contrib-copy':     '~0.4.1',
 			'grunt-contrib-compress': '~0.5.2',
 			'grunt-contrib-sass':     '~0.2.2',
+			'grunt-contrib-compass':  '~0.5.0',
 		};
 		
 		// Sanitize names where we need to for PHP/JS
