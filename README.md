@@ -41,6 +41,20 @@ Install the NPM modules required to actually process your newly-created project 
 npm install
 ```
 
+## Potential Issues You Might Encounter
+
+You might be missing a few Ruby gems for this repository. E.g. Ruby, Sass, Compass
+
+I already had Ruby installed. You can check if you have it install by running `ruby -v` in your terminal.
+
+###Installing Sass
+
+Simply run `gem install sass` once you've got Ruby on your system.
+
+###Installing Compass
+
+Simply run `gem update --system && gem install compass` once you've got Ruby on your system.
+
 ## Scaffold
 
 After running the init command above, you will be presented with a standard directory structure similar to:
