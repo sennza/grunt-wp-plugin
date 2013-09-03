@@ -137,13 +137,13 @@ module.exports = function( grunt ) {
 			}		
 		},
 		compass: {
-			dist: {                   // Target
+			dev: {                   // Target
 				options: {              // Target options
-					sassDir: 'css/sass',
-					cssDir: 'css',
-					imagesDir: 'images',
+				sassDir: 'css/sass',
+				cssDir: 'css',
+				imagesDir: 'images'
 				}
-    	}
+			}
 		}
 	} );
 	
