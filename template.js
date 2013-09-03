@@ -28,18 +28,13 @@ exports.template = function( grunt, init, done ) {
 		{
 			name   : 'prefix',
 			message: 'PHP function prefix (alpha and underscore characters only)',
-			default: 'wpplugin'
+			default: 'sennza'
 		},
-		init.prompt( 'description', 'The best WordPress extension ever made!' ),
-		init.prompt( 'homepage', 'http://wordpress.org/plugins' ),
-		init.prompt( 'author_name' ),
-		init.prompt( 'author_email' ),
-		init.prompt( 'author_url' ),
-		{
-			name: 'css_type',
-			message: 'CSS Preprocessor: Will you use "Sass", "LESS", or "none" for CSS with this project?',
-			default: 'Sass'
-		}
+		init.prompt( 'description', 'Yet Another Sennza Plugin' ),
+		init.prompt( 'homepage', 'http://www.sennza.com.au/' ),
+		init.prompt( 'author_name', 'Bronson Quick' ),
+		init.prompt( 'author_email', 'bronson@sennza.com.au' ),
+		init.prompt( 'author_url', 'http://www.sennza.com.au/' ),
 	], function( err, props ) {
 		props.keywords = [];
 		props.version = '0.1.0';
@@ -53,7 +48,8 @@ exports.template = function( grunt, init, done ) {
 			'grunt-contrib-watch':    '~0.2.0',
 			'grunt-contrib-clean':    '~0.5.0',
 			'grunt-contrib-copy':     '~0.4.1',
-			'grunt-contrib-compress': '~0.5.2'
+			'grunt-contrib-compress': '~0.5.2',
+			'grunt-contrib-sass':     '~0.2.2',
 		};
 		
 		// Sanitize names where we need to for PHP/JS
@@ -70,31 +66,6 @@ exports.template = function( grunt, init, done ) {
 
 		// Files to copy and process
 		var files = init.filesToCopy( props );
-
-		switch( props.css_type.toLowerCase()[0] ) {
-			case 'l':
-				delete files[ 'assets/css/sass/' + props.js_safe_name + '.scss'];
-				delete files[ 'assets/css/src/' + props.js_safe_name + '.css' ];
-				
-				props.devDependencies["grunt-contrib-less"] = "~0.5.0";
-				props.css_type = 'less';
-				break;
-			case 'n':
-			case undefined:
-				delete files[ 'assets/css/less/' + props.js_safe_name + '.less'];
-				delete files[ 'assets/css/sass/' + props.js_safe_name + '.scss'];
-				
-				props.css_type = 'none';
-				break;
-			// SASS is the default
-			default:
-				delete files[ 'assets/css/less/' + props.js_safe_name + '.less'];
-				delete files[ 'assets/css/src/' + props.js_safe_name + '.css' ];
-				
-				props.devDependencies["grunt-contrib-sass"] = "~0.2.2";
-				props.css_type = 'sass';
-				break;
-		}
 		
 		console.log( files );
 		
