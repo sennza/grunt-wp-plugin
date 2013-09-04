@@ -41,6 +41,12 @@ Install the NPM modules required to actually process your newly-created project 
 npm install
 ```
 
+## Watching your plugin
+
+I used to create a config.rb file and use [Compass.app]: http://compass.handlino.com/ to watch a theme or plugin folder that used Compass & Sass in the past but thanks to the wonder that is Grunt this app isn't needed anymore.
+
+All you have to do is run `grunt watch` from the directory where you ran `grunt-init grunt-wp-plugin` while you're in development and Grunt will do everything for you!
+
 ## Potential Issues You Might Encounter
 
 You might be missing a few Ruby gems for this repository. E.g. Ruby, Sass, Compass
