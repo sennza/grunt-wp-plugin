@@ -93,6 +93,10 @@ module.exports = function( grunt ) {
 					debounceDelay: 500
 				}
 			},
+			compass: {
+				files: ['css/sass/*.scss'],
+   			tasks: ['compass:dev', 'cssmin']
+			},
 			scripts: {
 				files: ['js/src/**/*.js', 'js/vendor/**/*.js'],
 				tasks: ['jshint', 'concat', 'uglify'],
