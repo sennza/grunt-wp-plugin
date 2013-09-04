@@ -35,7 +35,6 @@ exports.template = function( grunt, init, done ) {
 		init.prompt( 'author_name', 'Bronson Quick' ),
 		init.prompt( 'author_email', 'bronson@sennza.com.au' ),
 		init.prompt( 'author_url', 'http://www.sennza.com.au/' ),
-		init.prompt( 'repository', 'git@github.com:sennza/grunt-wp-plugin.git' )
 	], function( err, props ) {
 		props.keywords = [];
 		props.version = '0.1.0';
