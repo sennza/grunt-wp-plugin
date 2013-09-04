@@ -8,6 +8,13 @@
 
 This is based on the awesome work by Eric Mann: [grunt-wp-plugin]: https://github.com/10up/grunt-wp-plugin
 
+## What's different to 10up's version?
+
+1. We only use Sass at Sennza so I stripped out the CSS Preprocessor prompts and logic.
+2. We always use Compass & Sass so I baked that in.
+3. I've modified the directory structure (which I think I'll modify further soon ).
+4. I haven't run `grunt build` yet.
+
 ## Installation
 If you haven't already done so, install [grunt-init][].
 
@@ -91,4 +98,5 @@ The `/images/src` directory exists only to allow you to keep track of source fil
 
 ## Release History
 
- * 2013-09-03   v0.1.0   Initial beta release.
+* 2013-09-05   v0.1.1   Tweaked it more for Compass.
+* 2013-09-03   v0.1.0   Initial beta release.
