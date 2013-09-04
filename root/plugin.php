@@ -31,8 +31,8 @@
 
 /**
  * Built using grunt-wp-plugin
- * Copyright (c) 2013 10up, LLC
- * https://github.com/10up/grunt-wp-plugin
+ * https://github.com/sennza/grunt-wp-plugin
+ * Forked from https://github.com/10up/grunt-wp-plugin
  */
 
 // Useful global constants
